@@ -71,8 +71,14 @@ img {
 .wave-2 {
   background-color: var(--clr-primary-200);
 }
- .wave-3 {
-  background-color: var(--clr-primary-500);
+.wave-3 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("images/walking.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  color: #fff;
+  padding-top: 300px;
+  padding-bottom: 300px;
 }
 
 header {
@@ -201,8 +207,7 @@ section {
   }
 }
 
-
-.device{
+.device {
   transform: rotate(-10deg);
 }
 
