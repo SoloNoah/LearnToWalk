@@ -101,22 +101,26 @@ header {
 .navbar {
   overflow: hidden;
   background-color: #c23616;
-  padding-top: 1rem;
   position: fixed;
   display: flex;
   justify-content: end;
+  padding-right: 20px;
 }
 
 .navbar li {
-  padding-left: 50px;
+  padding-left: 20px;
   margin: 0;
-  height: auto;
 }
 .navbar a {
   display: block;
   color: #f2f2f2;
   text-align: center;
   text-decoration: none;
+  border-radius: 5px;
+}
+
+.navbar a:hover {
+  background-color: var(--clr-primary-500);
 }
 
 .sticky {
