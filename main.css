@@ -109,7 +109,7 @@ header {
   background-color: #c23616;
   position: fixed;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   padding-right: 20px;
 }
 
@@ -253,7 +253,7 @@ section {
 .profile {
   border-radius: 50%;
   height: 200px;
-  width: auto;
+  width: 200px;
   margin-left: auto;
   margin-right: auto;
 }
