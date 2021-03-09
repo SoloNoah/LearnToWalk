@@ -9,9 +9,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@1,700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
     <link rel="stylesheet" href="main.css">
+    <script src="index.js"></script>
 </head>
-<body>
+<body id="page">
 
     <nav class="navbar">
         <ul>
@@ -21,10 +23,12 @@
             <li><a class="link_label" dir="rtl" href="#top">צפו בסרטון הדרכה</a></li>
         </ul>    
     </nav>
+    <a class="fixed-btn text-scale" id="text-scale"onClick="changeFontSize()"><span class="material-icons">text_fields</span></a>
+    <a class="fixed-btn contrast" id="contrast"onClick="changeContrast()"><span class="material-icons">nightlight</span></a>
 
-    <header class="wave-1" id="top">   
+    <header class="wave-1 sec" id="top">   
         <div class="split container">
-            <div class="text-wrapper">
+            <div class="text-wrapper" id="text-wrapper">
                 <h1 dir="rtl">להמשיך ללכת</h1>
                 <p dir="rtl">אנו סטודנטים ללימודי הנדסה ב-SCE המכללה האקדמית סמי שמעון.</p>
                 <p dir="rtl">אנחנו נחושים וסבורים כי על ידי חשיבה הנדסית ניתן לעזור לגיל השלישי לחיים פעילים ושמחים יותר.
@@ -35,7 +39,7 @@
         </div>
     </header>
 
-    <section class="wave-2" id="mid_1">
+    <section class="wave-2 sec" id="mid_1">
         <div class="container ">
             <h2 dir="rtl" class="text-center">הכירו את המכשיר שיעשה לכם רק טוב </h2>       
             <div class="split">
@@ -50,7 +54,7 @@
         </div>
     </section>
 
-    <section class="wave-3" id="mid_2">
+    <section class="wave-3 sec" id="mid_2">
         <div class="container ">
             <h2 dir="rtl" class="text-center">מטרת המיזם</h2>       
             <div class="split">
@@ -65,7 +69,7 @@
         </div>
     </section>
 
-    <section class="wave-4" id="bot">
+    <section class="wave-4 sec" id="bot">
         <div class="container">
             <h2 dir="rtl" class="text-center">מי אנחנו?</h2>
             <div class="split">
