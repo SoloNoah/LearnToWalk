@@ -58,7 +58,7 @@ a {
 
 a:hover,
 .navbar a:hover {
-  background-color: var(--clr-hover);
+  background-color: var(--clr-hover) !important;
   color: #000;
 }
 
