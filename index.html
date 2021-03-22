@@ -15,39 +15,60 @@
 </head>
 <body id="page">
 
-    <nav class="navbar">
+    <nav class="navbar" role="navigation" aria-label="Navigation" tabindex="1">
         <ul>
-            <li><a class="link_label" dir="rtl" href="#bot">מי אנחנו?</a></li>
-            <li><a class="link_label" dir="rtl" href="#mid_2">מטרת המיזם</a> </li>
-            <li><a class="link_label" dir="rtl" href="#mid_1">הכירו את המכשיר</a> </li>
-            <li><a class="link_label" dir="rtl" href="#top">צפו בסרטון הדרכה</a></li>
+            <li><a class="link_label" dir="rtl" href="#bot" aria-label="who we are" tabindex="4">מי אנחנו?</a></li>
+            <li><a class="link_label" dir="rtl" href="#mid_2" aria-label="the purpose of this initiative" tabindex="3">מטרת המיזם</a> </li>
+            <li><a class="link_label" dir="rtl" href="#mid_1" aria-label="get to know the device" tabindex="2">הכירו את המכשיר</a> </li>
+            <li><a class="link_label" dir="rtl" href="#btn-floating" aria-label="introduction video" tabindex="1" onClick="videoFocus()">צפו בסרטון הדרכה</a></li>
         </ul>    
     </nav>
-    <a class="fixed-btn text-scale" id="text-scale"onClick="changeFontSize()"><span class="material-icons">text_fields</span></a>
-    <a class="fixed-btn contrast" id="contrast"onClick="changeContrast()"><span class="material-icons">nightlight</span></a>
+    <a class="fixed-btn text-scale" id="text-scale" tabindex="-1" onClick="changeFontSize()"><span class="material-icons">text_fields</span></a>
+    <a class="fixed-btn contrast" id="contrast" tabindex="-1" onClick="changeContrast()"><span class="material-icons">nightlight</span></a>
 
-    <header class="wave-1 sec" id="top">   
+    <header class="wave-0 sec" id="top">   
         <div class="split container">
             <div class="text-wrapper" id="text-wrapper">
-                <h1 dir="rtl">להמשיך ללכת</h1>
-                <p dir="rtl">אנו סטודנטים ללימודי הנדסה ב-SCE המכללה האקדמית סמי שמעון.</p>
-                <p dir="rtl">אנחנו נחושים וסבורים כי על ידי חשיבה הנדסית ניתן לעזור לגיל השלישי לחיים פעילים ושמחים יותר.
+                <h1 dir="rtl"  aria-label="Keep on walking" tabindex="6">להמשיך ללכת</h1>
+                <p dir="rtl" lang="he"
+                aria-label="We are engineering students from SCE Sami Shamoon College of engineering."
+                tabindex="7">אנו סטודנטים ללימודי הנדסה ב-SCE המכללה האקדמית סמי שמעון.</p>
+                <p dir="rtl" 
+                aria-label="We believe that with inovative thinking we can help the elderly live active and happier life. With the help of physiotherapists we are sure that this device will strengthen the body muscles and lead towards a more active daily life."
+                tabindex="7">אנחנו נחושים וסבורים כי על ידי חשיבה הנדסית ניתן לעזור לגיל השלישי לחיים פעילים ושמחים יותר.
                     בעזרת עבודה מול פיזותרפיסטים אנו בטוחים כי המכשיר יחזק את שרירי הגוף ויוביל לעליה בפעילות היומיומית.
                 </p>
-                <a href="https://www.youtube.com/watch?v=KYFwcIRx16g"  target="_blank" class="btn-floating pulse" dir="rtl"> לחץ לצפייה בסרטון הדרכה</a>
+                <a href="https://www.youtube.com/watch?v=pjpOYhykccE"  target="_blank" aria-label="click to watch introduction video" class="btn-floating pulse" id="btn-floating" dir="rtl" tabindex="8"> לחץ לצפייה בסרטון הדרכה</a>
             </div>        
         </div>
     </header>
 
+    <section class="wave-1 sec">
+        <div class="container">
+            <h1 dir="rtl" aria-label="All the reasons why">כל הסיבות למה</h1>
+            <p dir="rtl" lang="he"
+                aria-label="We are engineering students from SCE Sami Shamoon College of engineering."
+                tabindex="7">אנו סטודנטים ללימודי הנדסה ב-SCE המכללה האקדמית סמי שמעון.
+            </p>
+            <p dir="rtl" 
+            aria-label="We believe that with inovative thinking we can help the elderly live active and happier life. With the help of physiotherapists we are sure that this device will strengthen the body muscles and lead towards a more active daily life."
+            tabindex="7">אנחנו נחושים וסבורים כי על ידי חשיבה הנדסית ניתן לעזור לגיל השלישי לחיים פעילים ושמחים יותר.
+                בעזרת עבודה מול פיזותרפיסטים אנו בטוחים כי המכשיר יחזק את שרירי הגוף ויוביל לעליה בפעילות היומיומית.
+            </p>
+        </div>
+
+    </section>
+
+
     <section class="wave-2 sec" id="mid_1">
         <div class="container ">
-            <h2 dir="rtl" class="text-center">הכירו את המכשיר שיעשה לכם רק טוב </h2>       
+            <h2 dir="rtl" class="text-center" aria-label="get to know the device" tabindex="9">הכירו את המכשיר שיעשה לכם רק טוב </h2>       
             <div class="split">
                 <img class="device" src="images/device.png" alt="תמונת פרופיל נוח">
                 <div dir="rtl">
                     <p>האימון היומי שלכם מתחיל בישיבה!
                         נוח לשימוש, קל מאוד, וישפר בצורה מופלאה את הפעילות היומית שלך.
-                        המכשיר בנוי בצורה חצי מעגלית ומפסק וסוגר את הרגליים כמעט ללא מאמץ ומעניק תמיכה לבירכיים וכל זה באמצעות תכנון קפדני במעבדת המכטרוניקה שלנו בליווי פיזיותרפיסט ומרפא בעיסוק מומחים בתחום האימון הקוגנטיבי לדור השלישי. 
+                        המכשיר בנוי בצורה חצי מעגלית ומפסק וסוגר את הרגליים כמעט ללא מאמץ ומעניק תמיכה לבירכיים וכל זה באמצעות תכנון קפדני במעבדת   המכטרוניקה שלנו בליווי פיזיותרפיסט ומרפא בעיסוק מומחים בתחום האימון הקוגנטיבי לדור השלישי. 
                         שימוש במכשיר כ 10 דקות ביום ימנעו דלדול שרירים וישאירו אתכם צעירים זמן רב הרבה יותר.</p>
                 </div>
             </div>
@@ -76,8 +97,8 @@
                 <div class="profile-card-holder">
                     <img class="profile" src="images/noah.png" alt="תמונת פרופיל נוח">
                     <h3 class="profile-name" dir="rtl">נוח סולומון</h3>
-                    <p dir="rtl">סטודנט שנה רביעית להנדסת תוכנה. שואף לעבוד בתחום פיתוח הweb. יודע לעבוד עם html5, css3, React ו-Android studio. כמו כן, בעל ידע ב-SQL ו-Firebase.</p>
-                    <p dir="rtl"> כרגע עובד על פרויקט הגמר שמשלב עיבוד תמונה ולמידה עמוקה לקיטלוג מסמכים עבריים היסטוריים מהמאה ה-15 ל-15 מחלקות שונות. במקביל הצוות עובד על פיתוח אתר וממשק נוח עבור הפליאוגרפים תוך שימוש ב-React, Nodejs ו-Django.
+                    <p dir="rtl">סטודנט שנה רביעית להנדסת תוכנה. שואף לעבוד בתחום פיתוח הweb. יודע לעבוד עם Html5, Css3, React ו-Android studio. כמו כן, בעל ידע ב-SQL, MongoDB ו-Firebase.</p>
+                    <p dir="rtl"> כרגע עובד על פרויקט הגמר שמשלב עיבוד תמונה ולמידה עמוקה לקיטלוג מסמכים עבריים היסטוריים מהמאה ה-15 ל-15 מחלקות שונות. במקביל הצוות עובד על פיתוח אתר וממשק נוח עבור הפליאוגרפים תוך שימוש ב-React, Nodejs ו-MongoDB.
                     
                 </div>
                 <div class="profile-card-holder">
