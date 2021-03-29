@@ -1,3 +1,12 @@
+function scrollToTop() {
+  var scrollToTopBtn = document.getElementById('logo');
+  var rootElement = document.documentElement;
+  rootElement.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  });
+}
+
 function videoFocus() {
   const videoBtn = document.getElementsByClassName('btn-floating');
   videoBtn.focus();
@@ -51,13 +60,11 @@ function changeGrayscale() {
   if (!fixedButton.classList.contains('grayscale')) {
     fixedButton.classList.add('grayscale');
     Array.from(document.getElementsByTagName('*')).forEach((el) => {
-      //el.style.filter = 'grayscale(100%)';
       el.classList.add('grayscale');
     });
   } else {
     fixedButton.classList.remove('grayscale');
     Array.from(document.getElementsByTagName('*')).forEach((el) => {
-      //el.style.filter = 'grayscale(0%)';
       el.classList.remove('grayscale');
     });
   }
