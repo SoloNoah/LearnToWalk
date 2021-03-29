@@ -17,10 +17,10 @@ function changeFontSize() {
     }
     fixedButton.classList.add('pressed');
   } else if (fixedButton.classList.contains('pressed')) {
-    page.style.fontSize = '1rem';
+    page.style.fontSize = '1.2rem';
     headerText.style.top = '30%';
     for (let i = 0; i < buttons.length; i++) {
-      buttons[i].style.fontSize = '1rem';
+      buttons[i].style.fontSize = '1.2rem';
     }
     fixedButton.classList.remove('pressed');
   }
@@ -37,13 +37,28 @@ function changeContrast() {
     }
     navbar[0].classList.add('blackend');
     fixedButton.classList.add('pressed');
-    console.log(fixedButton.classList);
   } else if (sections[0].classList.contains('blackend')) {
     for (let i = 0; i < sections.length; i++) {
       sections[i].classList.remove('blackend');
     }
     navbar[0].classList.remove('blackend');
-
     fixedButton.classList.remove('pressed');
+  }
+}
+
+function changeGrayscale() {
+  const fixedButton = document.getElementById('grayscale');
+  if (!fixedButton.classList.contains('grayscale')) {
+    fixedButton.classList.add('grayscale');
+    Array.from(document.getElementsByTagName('*')).forEach((el) => {
+      //el.style.filter = 'grayscale(100%)';
+      el.classList.add('grayscale');
+    });
+  } else {
+    fixedButton.classList.remove('grayscale');
+    Array.from(document.getElementsByTagName('*')).forEach((el) => {
+      //el.style.filter = 'grayscale(0%)';
+      el.classList.remove('grayscale');
+    });
   }
 }

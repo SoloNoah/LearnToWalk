@@ -13,10 +13,11 @@
     <link rel="stylesheet" href="main.css">
     <script src="index.js"></script>
 </head>
-<body id="page">
 
+<body id="page">
     <nav class="navbar" role="navigation" aria-label="Navigation" tabindex="1">
-        <ul>
+        <a href="#top"><span class="logo">Learn To Walk</span></a>
+        <ul class="list">
             <li><a class="link_label" dir="rtl" href="#bot" aria-label="who we are" tabindex="4">מי אנחנו?</a></li>
             <li><a class="link_label" dir="rtl" href="#mid_2" aria-label="the purpose of this initiative" tabindex="3">מטרת המיזם</a> </li>
             <li><a class="link_label" dir="rtl" href="#mid_1" aria-label="get to know the device" tabindex="2">הכירו את המכשיר</a> </li>
@@ -24,8 +25,10 @@
         </ul>    
     </nav>
     <a class="fixed-btn text-scale" id="text-scale" tabindex="-1" onClick="changeFontSize()"><span class="material-icons">text_fields</span></a>
-    <a class="fixed-btn contrast" id="contrast" tabindex="-1" onClick="changeContrast()"><span class="material-icons">nightlight</span></a>
-
+    <a class="fixed-btn contrast" id="contrast" tabindex="-1" onClick="changeContrast()"><span class="material-icons">nightlight</span></a> 
+    <a class="fixed-btn grayscale-btn" id="grayscale" tabindex="-1" onClick="changeGrayscale()"><span class="material-icons">nightlight</span></a>
+    
+    
     <header class="wave-0 sec" id="top">   
         <div class="split container">
             <div class="text-wrapper" id="text-wrapper">
@@ -45,15 +48,20 @@
 
     <section class="wave-1 sec">
         <div class="container">
-            <h1 dir="rtl" aria-label="All the reasons why">כל הסיבות למה</h1>
-            <p dir="rtl" 
-            aria-label="We believe that with inovative thinking we can help the elderly live active and happier life. With the help of physiotherapists we are sure that this device will strengthen the body muscles and lead towards a more active daily life."
-            tabindex="7">במחקר וסקר שביצענו זקנים מתאבלים על גופם הקודם וכתוצאה מכך עושים פחות פעילות גופנית ומרבים לשבת חלק ניכר מהיום הגיל הממוצע שבדקנו הינו 80
-            57% מהנשאלים העידו כי הם עושים ספורט ו 60% מהם עושים הליכה בלבד, 57% העידו כי קשה להם לעלות ולרדת במדרגות בכוחות עצמם ו 100% אמרו כי הפעולה של לקום מישיבה קשה להם, בנוסף רק 28 % מהנשאלים העידו כי אינם מתקשים לעמוד עמידה ממושכת השאר בין 5-60 דקות 
-           החלק החשוב ביותר מבחינתו הוא שזקן ממוצע בישראל יושב מול הטלוויזיה /המחשב / עיתון  כ 4.2 שעות ביום ו 43% מהם היו מוכנים להשתמש במכשיר שלנו רק בישיבה בעוד שהשאר היו מוכנים בלי קשר לישיבה או עמידה
-            </p>
+            <h2 class="text-center" dir="rtl" aria-label="All the reasons why">כל הסיבות למה</h2>
+            <div dir="rtl">
+                <p>במחקר וסקר שביצענו זקנים מתאבלים על גופם הקודם וכתוצאה מכך עושים פחות פעילות גופנית ומרבים לשבת חלק ניכר מהיום.</p>
+                <p>הגיל הממוצע שבדקנו הינו 80. מתוכם 57% מהנשאלים העידו כי הם עושים ספורט ו 60% מהם עושים הליכה בלבד. 57% העידו כי קשה להם לעלות ולרדת במדרגות בכוחות עצמם וכולם בפה אחד אמרו כי הפעולה של לקום מישיבה קשה להם. בנוסף רק 28 % מהנשאלים העידו כי אינם מתקשים לעמוד עמידה ממושכת. </p>
+            </div>
+            <div dir="rtl">
+                <p> החלק החשוב ביותר מבחינתו הוא שזקן ממוצע בישראל יושב מול הטלוויזיה /המחשב / עיתון  כ 4.2 שעות ביום ו 43% מהם היו מוכנים להשתמש במכשיר שלנו רק בישיבה בעוד שהשאר היו מוכנים בלי קשר לישיבה או עמידה</p>
+            </div>
         </div>
 
+        <div class="container split survey-links">
+            <a class="survey-link" dir="rtl" href="https://docs.google.com/forms/d/e/1FAIpQLSccUiWItC-2RAaNs9R2VZ1vtlhExbk7d5-uJHn4zyxoDnuj7A/viewform">ליחצו על מנת להשיב לשאלון על מנת שנוכל לעזור לכם.</a>
+            <a class="survey-link" dir="rtl" href="./files/survey.pdf" download>ליחצו על מנת לצפות בקובץ הסקר ולצפות בתוצאות.</a>   
+        </div>
     </section>
 
 
@@ -61,13 +69,22 @@
         <div class="container ">
             <h2 dir="rtl" class="text-center" aria-label="get to know the device" tabindex="9">הכירו את המכשיר שיעשה לכם רק טוב </h2>       
             <div class="split">
-                <img class="device" src="images/device.png" alt="תמונת פרופיל נוח">
+                <img class="device" src="images/device.jpg" alt="המכשיר">
                 <div dir="rtl">
                     <p>האימון היומי שלכם מתחיל בישיבה!
                         נוח לשימוש, קל מאוד, וישפר בצורה מופלאה את הפעילות היומית שלך.
                         המכשיר בנוי בצורה חצי מעגלית ומפסק וסוגר את הרגליים כמעט ללא מאמץ ומעניק תמיכה לבירכיים וכל זה באמצעות תכנון קפדני במעבדת   המכטרוניקה שלנו בליווי פיזיותרפיסט ומרפא בעיסוק מומחים בתחום האימון הקוגנטיבי לדור השלישי. 
                         שימוש במכשיר כ 10 דקות ביום ימנעו דלדול שרירים וישאירו אתכם צעירים זמן רב הרבה יותר.</p>
                 </div>
+            </div>
+            <div class="split">
+                <div dir="rtl">
+                    <p>האימון היומי שלכם מתחיל בישיבה!
+                        נוח לשימוש, קל מאוד, וישפר בצורה מופלאה את הפעילות היומית שלך.
+                        המכשיר בנוי בצורה חצי מעגלית ומפסק וסוגר את הרגליים כמעט ללא מאמץ ומעניק תמיכה לבירכיים וכל זה באמצעות תכנון קפדני במעבדת   המכטרוניקה שלנו בליווי פיזיותרפיסט ומרפא בעיסוק מומחים בתחום האימון הקוגנטיבי לדור השלישי. 
+                        שימוש במכשיר כ 10 דקות ביום ימנעו דלדול שרירים וישאירו אתכם צעירים זמן רב הרבה יותר.</p>
+                </div>
+                <img class="device" src="images/handles.jpg" alt="ידיות">
             </div>
         </div>
     </section>
