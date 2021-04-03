@@ -1,3 +1,16 @@
+const navSlide = () => {
+  const burger = document.querySelector('.burger');
+  const nav = document.querySelector('.nav-links');
+
+  if (burger) {
+    burger.addEventListener('click', () => {
+      nav.classList.toggle('nav-active');
+
+      burger.classList.toggle('toggle');
+    });
+  }
+};
+
 function scrollToTop() {
   var scrollToTopBtn = document.getElementById('logo');
   var rootElement = document.documentElement;
@@ -19,10 +32,10 @@ function changeFontSize() {
   const buttons = document.getElementsByTagName('A');
 
   if (!fixedButton.classList.contains('pressed')) {
-    page.style.fontSize = '1.5rem';
+    page.style.fontSize = '1.4rem';
     headerText.style.top = '25%';
     for (let i = 0; i < buttons.length; i++) {
-      buttons[i].style.fontSize = '2rem';
+      buttons[i].style.fontSize = '1.4rem';
     }
     fixedButton.classList.add('pressed');
   } else if (fixedButton.classList.contains('pressed')) {
@@ -60,6 +73,7 @@ function changeGrayscale() {
   if (!fixedButton.classList.contains('grayscale')) {
     fixedButton.classList.add('grayscale');
     Array.from(document.getElementsByTagName('*')).forEach((el) => {
+      console.log(el);
       el.classList.add('grayscale');
     });
   } else {
@@ -69,3 +83,5 @@ function changeGrayscale() {
     });
   }
 }
+
+navSlide();

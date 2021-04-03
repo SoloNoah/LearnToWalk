@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no">
+    <meta name="HandheldFriendly" content="true" />
     <title dir="ltr">להמשיך ללכת</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;700&display=swap" rel="stylesheet">
@@ -13,18 +14,22 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
-    <script src="index.js"></script>
 </head>
 
 <body id="page">
     <nav class="navbar" role="navigation" aria-label="Navigation" tabindex="1">
-        <a id="logo" onClick="scrollToTop()"><span class="logo" >Learn To Walk</span></a>
-        <ul class="list">
+       <div class="logo" onClick="scrollToTop()">Learn To Walk</div>
+        <ul class="nav-links">
             <li><a class="link_label" dir="rtl" href="#bot" aria-label="who we are" tabindex="4">מי אנחנו?</a></li>
             <li><a class="link_label" dir="rtl" href="#mid_2" aria-label="the purpose of this initiative" tabindex="3">מטרת המיזם</a> </li>
             <li><a class="link_label" dir="rtl" href="#mid_1" aria-label="get to know the device" tabindex="2">הכירו את המכשיר</a> </li>
             <li><a class="link_label" dir="rtl" href="#btn-floating" aria-label="introduction video" tabindex="1" onClick="videoFocus()">צפו בסרטון הדרכה</a></li>
         </ul>    
+        <div class="burger" id="burger">
+            <div class="line-1"></div>
+            <div class="line-2"></div>
+            <div class="line-3"></div>
+        </div>
     </nav>
     <a class="fixed-btn text-scale" id="text-scale" tabindex="-1" onClick="changeFontSize()"><span class="material-icons">text_fields</span></a>
     <a class="fixed-btn contrast" id="contrast" tabindex="-1" onClick="changeContrast()"><span class="material-icons">nightlight_round</span></a> 
@@ -61,7 +66,7 @@
         </div>
 
         <div class="container split survey-links">
-            <a class="survey-link" dir="rtl" href="https://docs.google.com/forms/d/e/1FAIpQLSccUiWItC-2RAaNs9R2VZ1vtlhExbk7d5-uJHn4zyxoDnuj7A/viewform">ליחצו על מנת להשיב לשאלון על מנת שנוכל לעזור לכם.</a>
+            <a class="survey-link" dir="rtl" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSccUiWItC-2RAaNs9R2VZ1vtlhExbk7d5-uJHn4zyxoDnuj7A/viewform">ליחצו על מנת להשיב לשאלון על מנת שנוכל לעזור לכם.</a>
             <a class="survey-link" dir="rtl" href="./files/survey.pdf" download>ליחצו על מנת לצפות בקובץ הסקר ולצפות בתוצאות.</a>   
         </div>
     </section>
@@ -81,10 +86,9 @@
             </div>
             <div class="split">
                 <div dir="rtl">
-                    <p>האימון היומי שלכם מתחיל בישיבה!
-                        נוח לשימוש, קל מאוד, וישפר בצורה מופלאה את הפעילות היומית שלך.
-                        המכשיר בנוי בצורה חצי מעגלית ומפסק וסוגר את הרגליים כמעט ללא מאמץ ומעניק תמיכה לבירכיים וכל זה באמצעות תכנון קפדני במעבדת   המכטרוניקה שלנו בליווי פיזיותרפיסט ומרפא בעיסוק מומחים בתחום האימון הקוגנטיבי לדור השלישי. 
-                        שימוש במכשיר כ 10 דקות ביום ימנעו דלדול שרירים וישאירו אתכם צעירים זמן רב הרבה יותר.</p>
+                    <p>גומיות לידיים מאפשרות שילוב של מגוון רחב של תרגילי ידיים ובכך לחזק את שרירי הידיים במקביל לשרירי הירך.
+                        וכתוצאה מכך נוכל לקבל שתי פונקציות במכה אחת .</p>
+                    <a class="survey-link" dir="rtl"  target="_blank" href="https://www.youtube.com/watch?v=IHBBVGp7_ZM">ליחצו לצפייה באופן שימוש בידיות.</a>
                 </div>
                 <img class="device" src="images/handles.jpg" alt="ידיות">
             </div>
@@ -96,7 +100,7 @@
             <h2 dir="rtl" class="text-center">מטרת המיזם</h2>       
             <div class="split">
                 <div dir="rtl">
-                    <p>המיזם מגיע מתוך שליחות שאנו המהנדסים לעתיד נשתמש בידע הרחב שלנו על מנת להעניק אותו לחברה שלנו ובייחוד לדור הוותיק אותו אנו מעריכים מכל וכל לכן באמצעות שיתוף פעולה להנדסת תוכנה, מכונות וחשמל בחרנו להתמקד בשיפור אורח חייהם של הדור הוותיק בישראל ובעולם</p>
+                    <p>המיזם מגיע מתוך שליחות שאנו המהנדסים לעתיד נשתמש בידע הרחב שלנו על מנת להעניק אותו לחברה שלנו ובייחוד לדור הוותיק אותו אנו מעריכים מכל וכל לכן באמצעות שיתוף פעולה להנדסת תוכנה, מכונות וחשמל בחרנו להתמקד בשיפור אורח חייהם של הדור הוותיק בישראל ובעולם.</p>
                 </div>
                 <div dir="rtl">
                     <p>החזון שלנו הוא שכל סבא בעולם יוכל לשחק כדורגל עם נכדיו באופן עצמאי באמצעות פעולה פשוטה וללא מאמץ לחזק את שרירי הרגליים ולשפר את כל היום. כל יום מחדש, תוכל/י בקלות לקום ולהתנייד ממקום למקום ולהזדקן מאוחר יותר. 
@@ -132,5 +136,7 @@
             </div>
         </div>
     </section>
+    
+    <script src="index.js"></script>
 </body>
 </html>
