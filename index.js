@@ -35,14 +35,17 @@ function changeFontSize() {
     page.style.fontSize = '1.4rem';
     headerText.style.top = '25%';
     for (let i = 0; i < buttons.length; i++) {
-      buttons[i].style.fontSize = '1.4rem';
+      if (!buttons[i].classList.contains('fixed-btn')) buttons[i].style.fontSize = '1.4rem';
+      else {
+        buttons[i].style.fontSize = '1.2rem';
+      }
     }
     fixedButton.classList.add('pressed');
   } else if (fixedButton.classList.contains('pressed')) {
     page.style.fontSize = '1.2rem';
     headerText.style.top = '30%';
     for (let i = 0; i < buttons.length; i++) {
-      buttons[i].style.fontSize = '1.2rem';
+      if (!buttons[i].classList.contains('fixed-btn')) buttons[i].style.fontSize = '1.2rem';
     }
     fixedButton.classList.remove('pressed');
   }
@@ -64,6 +67,26 @@ function changeContrast() {
       sections[i].classList.remove('blackend');
     }
     navbar[0].classList.remove('blackend');
+    fixedButton.classList.remove('pressed');
+  }
+}
+
+function turnToTheLight() {
+  const sections = document.getElementsByClassName('sec');
+  const navbar = document.getElementsByTagName('NAV');
+  const fixedButton = document.getElementById('lightmode');
+
+  if (!sections[0].classList.contains('light')) {
+    for (let i = 0; i < sections.length; i++) {
+      sections[i].classList.add('light');
+    }
+    navbar[0].classList.add('light');
+    fixedButton.classList.add('pressed');
+  } else if (sections[0].classList.contains('light')) {
+    for (let i = 0; i < sections.length; i++) {
+      sections[i].classList.remove('light');
+    }
+    navbar[0].classList.remove('light');
     fixedButton.classList.remove('pressed');
   }
 }
